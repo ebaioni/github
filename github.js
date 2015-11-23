@@ -699,6 +699,11 @@
          this.createPullRequest = function(options, cb) {
             _request('POST', repoPath + '/pulls', options, cb);
          };
+         
+         // Update PR/Issue
+         this.editIssue = function(id, options, cb) {
+            _request('PATCH', repoPath + '/issues/' + id, options, cb);
+         }
 
          // List hooks
          // --------
